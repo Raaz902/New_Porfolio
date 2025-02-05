@@ -1,0 +1,103 @@
+/* .course-card {
+  width: 100%;
+  min-height: 18rem !important;
+  max-height: 22rem !important;
+  background: linear-gradient(to bottom, #ebf0fb 0%, #e8e8ed 100%);
+  border: 0px snow !important;
+}
+
+.course-card .imagebox {
+  width: 100%;
+  min-height: 50% !important;
+  max-height: 50% !important;
+ 
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course-card .imagebox img {
+  max-width: 100% !important;
+  min-width: 100% !important;
+  max-height: 9rem !important;
+  object-fit: contain; 
+}
+
+.course-card .contentbox {
+  width: 100%;
+  min-height: 50% !important;
+  margin-bottom: 0px !important;
+} */
+
+/* future statistics */
+.transforming-lives1 .heading {
+  line-height: 40px;
+  color: #000;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+/* future statistics */
+.transforming-lives1 h2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+ 
+  color: #264796;
+  font-weight: 750;
+}
+
+.transforming-lives2 {
+  background-color: #003a73;
+  color: white;
+}
+
+/* infinite scroll images*/
+
+.infinite-scroll-image-container {
+  width: 12rem;
+  height: 9rem;
+}
+
+.infinite-scroll-image {
+  width: 12rem;
+  height: 9rem;
+  padding: 0 15px;
+  object-fit: cover;
+}
+
+.infinite-scroll-image:last-of-type {
+  padding-left: 0;
+}
+
+.infinite-scroll-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.infinite-scroll-inner {
+  position: absolute;
+  display: flex;
+}
+
+.infinite-scroll-section { 
+  animation: swipe var(--speed) linear infinite backwards;
+}
+
+@keyframes swipe {
+    0% {
+        transform: translate(var(--translate-start)); /* Default to 0 */
+    }
+    100% {
+        transform: translate(var(--translate-end)); /* Default to -100% */
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev { 
+  color: #21a7d0 !important; /* Make the icon white */
+ 
+}

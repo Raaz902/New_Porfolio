@@ -1,0 +1,88 @@
+.section {
+  max-height: 7vh;
+}
+.header2-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid palegreen; */
+  height: 15vh;
+}
+
+.logo {
+  margin-left: 2rem;
+  margin-top: 0.6rem;
+  max-width: 100%;
+}
+.boost-logo {
+  height: 9vh;
+  margin-bottom: 1rem;
+}
+
+/* Mobile header */
+
+.custom-list:hover {
+  color: green;
+}
+
+.custom-list {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  padding: 10px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.custom-list:hover {
+  color: #72c02c;
+  /* Light gray background on hover */
+  font-weight: 500; /* Bold text on hover */
+  transform: scale(1.0005); /* Slightly enlarges the element */
+
+  border-radius: 5px; /* Rounded corners */
+}
+
+
+/* Keyframe for opening (slide-in) */
+@keyframes shadow-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+    background-color: rgba(255, 249, 249, 0.5); /* Initial color */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    background-color: rgba(128, 128, 128, 0.5); /* Final gray color */
+  }
+}
+
+/* Keyframe for closing (slide-out) */
+@keyframes shadow-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+    background-color: rgba(128, 128, 128, 0.5); /* Gray color */
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+    background-color: rgba(255, 249, 249, 0.5); /* Light color */
+  }
+}
+
+/* Apply the opening animation */
+.custom-backdrop {
+  animation: shadow-slide 1s ease-out forwards;
+  background-color: rgba(255, 249, 249, 0.5); /* Initial background color */
+}
+
+/* Apply the closing animation when the Offcanvas is closed */
+.custom-backdrop-close {
+  animation: shadow-slide-out 1s ease-out forwards;
+  background-color: rgba(128, 128, 128, 0.5); /* Gray background color */
+}
+

@@ -1,0 +1,17 @@
+.footer {
+  background-color: #25085c;
+  color: #ffffff80;
+}
+
+.footer .footer-logo {
+  background-color: white;
+  width: clamp(10rem, 20vw, 20rem);
+}
+.footer .responsive-h3 {
+  color: #fff;
+  font-family: "Jost", Sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.4rem !important ;
+}
+
+
