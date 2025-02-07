@@ -104,7 +104,7 @@ const Header2 = () => {
                         </Link>
                     </li>
                     <li className='list-none group'>
-                        <Link to='programs' spy={true}
+                        <Link to='education' spy={true}
                             smooth={true}
                             offset={-100}
                             duration={100}

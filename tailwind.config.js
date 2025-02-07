@@ -20,11 +20,13 @@ module.exports = {
         'home-banner': "url('https://media.istockphoto.com/id/1040926086/photo/homeless-black-eyed-bearded-face-with-bruise-bad-life-style-lifestyle-concept-close-up-photo.jpg?s=612x612&w=0&k=20&c=19nMs6ls9gKf7koQXX20mYaa_FcZMnZ7IiA-WS6Fvls=')"
       }
     },
-    // screens: {
-    //   'sm': '576px',
-    //   'md': '960px',
-    //   'lg': '1440px',
-    // },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
   },
   plugins: [require("daisyui")],
 }

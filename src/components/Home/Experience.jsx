@@ -6,7 +6,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { MdWorkHistory } from 'react-icons/md';
 
-const HomeCourses = () => {
+const Experience = () => {
 
   return (
     <div className="mt-4" id="experience">
@@ -25,7 +25,7 @@ const HomeCourses = () => {
       </div>
 
       {/* Timeline Section */}
-      <div className="bg-gray-200 md:px-5 py-5">
+      <div className="bg-gray-100 md:px-5 my-2  md:mx-20 border rounded">
         <VerticalTimeline>
           {/* Full Stack Developer */}
           <VerticalTimelineElement
@@ -134,4 +134,4 @@ const HomeCourses = () => {
   );
 };
 
-export default HomeCourses;
+export default Experience;

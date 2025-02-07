@@ -1,9 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Accordion, AccordionContext, Button, Card, Modal, Offcanvas, useAccordionButton } from 'react-bootstrap';
 import { VscMenu } from "react-icons/vsc";
-import logo from '../../images/logo.jpg'
 import { Link } from 'react-scroll';
-import Contact from '../Home/Contact';
+import logo from '../../components/images/102kb.jpg'
 
 
 const PINK = 'rgba(255, 192, 203, 0.6)';
@@ -51,12 +50,12 @@ const MobileMenu = () => {
     const [showContact, setShowContact] = useState(false);
 
     return (
-        <div >
-            <div className="w-full flex justify-between items-center px-2">
+        <div className='sticky top-0 z-10'>
+            <div className="w-full flex justify-between items-center px-2 py-1 my-2 bg-gray-100 ">
                 <div className="w-[25rem] flex justify-start items-center">
-                    <span className='w-1/4'> <img src={logo} alt="logo image" /></span>
-                    <span className='text-2xl font-nunito font-bold'>NEW LIFE
-                        <span className='block text-sm font-nunito font-bold'>Rehabilitation & De-Addiction Centre</span>
+                    <span className='w-[3rem] me-2'> <img src={logo} alt="logo image" className='rounded-full' /></span>
+                    <span className='text-2xl font-nunito font-bold text-cyan'>Mohammad Raaz
+                        <span className='block text-sm font-nunito font-bold text-dark'>Software Development Engineer</span>
                     </span>
                 </div>
 
@@ -68,7 +67,7 @@ const MobileMenu = () => {
             <Offcanvas show={show} onHide={handleClose} backdrop={true} scroll={true} style={{ width: '16rem' }} backdropClassName={show ? "custom-backdrop" : "custom-backdrop-close"} >
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>
-                        <img className='w-[5rem] mt-0' src={logo} alt="logo" />
+                        <img className='w-[5rem] mt-0 rounded-full' src={logo} alt="logo" />
                     </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body className='mt-0 pt-0'>
@@ -130,7 +129,7 @@ const MobileMenu = () => {
             </Offcanvas>
 
             {/* contact modal */}
-            <Modal
+            {/* <Modal
                 show={showContact}
                 size='xl'
                 onHide={() => setShowContact(false)}
@@ -147,7 +146,7 @@ const MobileMenu = () => {
                 <Modal.Body>
                     <Contact setShow={setShowContact} />
                 </Modal.Body>
-            </Modal>
+            </Modal> */}
         </div >
     );
 }
