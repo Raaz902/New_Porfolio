@@ -133,7 +133,10 @@ const Header2 = () => {
                 </div>
                 <div className='col-span-1 flex items-center justify-around'>
                     <Fade direction='right'>
-                        <button /* onClick={() => setShow(true)} */ className='bg-cyan text-white p-2   text-sm focus:ring hover:ring-black font-medium' >Contact Now</button>
+                         <a href="https://wa.me/919750916786" target="_blank" rel="noopener noreferrer">
+                            <button /* onClick={() => setShow(true)} */ className='bg-cyan text-white p-2   text-sm focus:ring hover:ring-black font-medium' >Contact Now</button>
+                                </a>    
+                      
                         {/* <Link to='contact' spy={true}
                             smooth={true}
                             offset={-100}
