@@ -25,7 +25,7 @@ const HomePage = () => {
           {/* Left Section: Introduction */}
           <div className="flex justify-center items-center ">
             <div className="max-w-lg ">
-              <p className="text-md text-cyan font-rubik font-medium sm:mt-0 mt-3">
+              <p className="text-md text-cyan font-rubik font-medium sm:mt-0 md:mt-3">
                 Hello,
               </p>
               <p className="lg:text-4xl text-3xl text-black font-nunito font-bold leading-tight">
@@ -36,7 +36,7 @@ const HomePage = () => {
                 <br /><br />
                 Let’s collaborate to turn your ideas into reality and create innovative solutions that drive success!
               </p>
-              <div className="mt-6 flex justify-between items-center gap-x-4">
+              <div className="mt-6 flex justify-between items-center gap-x-4 p-2">
                 <a href="https://wa.me/919750916786" target="_blank" className="no-underline" rel="noopener noreferrer">
                   <span
                     onClick={() => setShow(true)}
@@ -60,7 +60,7 @@ const HomePage = () => {
           {/* Right Section: Image */}
           <div className="grid grid-cols-1 justify-items-center gap-20">
             <img
-              className="rounded-full h-60 w-60 shadow-lg border-4 border-cyan"
+              className="rounded-full h-60 w-60 shadow-lg border-4 border-cyan mt-3 mb-0"
               src={final_Home_Image}
               alt="Muhammad Raaz"
             />
