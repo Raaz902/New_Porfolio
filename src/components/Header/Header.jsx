@@ -71,12 +71,12 @@ const Header2 = () => {
                     </div>
                     <div className="">
                         <p className='text-3xl font-nunito font-bold pt-3 m-0 p-0 text-cyan'>Mohammad Raaz</p>
-                        <p className='text-sm font-rubik m-0 p-0'>Software Developement Engineer</p>
+                        <p className='text-sm font-rubik m-0 p-0'>Software Development Engineer</p>
                     </div>
 
 
                 </div>
-                <div className="col-span-4 flex items-center justify-evenly px-2 text-[#4a4848] text-md font-[420] uppercase ">
+                <div className="col-span-4 flex items-center justify-evenly px-2 text-[#4a4848]  text-sm font-[420] uppercase ">
                     <li className='list-none group'>
                         <Link to='home' spy={true}
                             smooth={true}
@@ -92,6 +92,15 @@ const Header2 = () => {
                             duration={100}
                             className=' no-underline text-current'>
                             <span className='hover:text-cyan cursor-pointer'>Experience</span>
+                        </Link>
+                    </li>
+                    <li className='list-none group'>
+                        <Link to='techstack' spy={true}
+                            smooth={true}
+                            offset={-100}
+                            duration={100}
+                            className=' no-underline text-current'>
+                            <span className='hover:text-cyan cursor-pointer'>Tech Stack</span>
                         </Link>
                     </li>
                     <li className='list-none group'>

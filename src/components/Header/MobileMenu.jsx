@@ -98,6 +98,14 @@ const MobileMenu = () => {
                             </Link>
                         </li> */}
                         <li className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
+                            <Link onClick={() => setShow(false)} to='techstack' spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={100} className=' no-underline text-current'>
+                                <span className='hover:text-cyan cursor-pointer'>TECH STACK</span>
+                            </Link>
+                        </li>
+                        <li className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
                             <Link onClick={() => setShow(false)} to='projects' spy={true}
                                 smooth={true}
                                 offset={-100}
@@ -106,11 +114,11 @@ const MobileMenu = () => {
                             </Link>
                         </li>
                         <li className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
-                            <Link onClick={() => setShow(false)} to='programs' spy={true}
+                            <Link onClick={() => setShow(false)} to='education' spy={true}
                                 smooth={true}
                                 offset={-100}
                                 duration={100} className=' no-underline text-current'>
-                                <span className='hover:text-cyan cursor-pointer'>PROGRAMS</span>
+                                <span className='hover:text-cyan cursor-pointer'>EDUCATION</span>
                             </Link>
                         </li>
                         <li className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">

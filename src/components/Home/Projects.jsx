@@ -58,7 +58,7 @@ const HomeCourses = () => {
                     <p className='text-3xl md:text-4xl text-slate-800 text-center pt-0 mt-0 font-bold font-nunito'>Selected Projects</p>
                 </Fade>
                 <p className="lg:text-lg text-md text-black font-rubik px-5 text-center">
-                    There are some selected projects i developed.
+                    Here are some selected projects I developed.
                 </p>
             </div>
 

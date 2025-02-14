@@ -11,6 +11,7 @@ import { Link } from 'react-scroll';
 import final_Home_Image from '../../components/images/raaz_new.jpg'
 import { Modal } from 'react-bootstrap';
 import Education from './Education';
+import TechStack from './TechStack/TechStack';
 
 
 const HomePage = () => {
@@ -87,6 +88,7 @@ const HomePage = () => {
 
       {/*  */}
       <Experience />
+      <TechStack/>
       <Projects />
       <Education />
       {/* <PastStatistics /> */}
