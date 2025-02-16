@@ -32,7 +32,7 @@ const Experience = () => {
             position="left"
             className="vertical-timeline-element--work"
             date="December 2023 - Present"
-            dateClassName="text-dark text-sm font-semibold"
+            dateClassName="lg:text-gray-800 text-sm font-semibold"
             contentStyle={{
               background: 'linear-gradient(135deg, rgb(2 6 6), rgb(15 142 171))',
               color: '#f8fafc',
@@ -80,18 +80,18 @@ const Experience = () => {
             position="right"
             className="vertical-timeline-element--work"
             date="December 2023 - Present"
-            dateClassName="text-dark text-sm font-semibold"
+            dateClassName="lg:text-gray-800  text-sm font-semibold"
             contentStyle={{
-              background: 'linear-gradient(135deg, #1e40af, #4f46e5)',
+              background: 'linear-gradient(135deg, rgb(13 157 127), rgb(93 78 39))',
               color: '#f8fafc',
               borderRadius: '12px',
               padding: '20px',
               boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.4)',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
             }}
-            contentArrowStyle={{ borderRight: '8px solid #4338ca' }}
+            contentArrowStyle={{ borderRight: '8px solid rgb(13 157 127)' }}
             iconStyle={{
-              background: 'linear-gradient(135deg, #4338ca, #4f46e5)',
+              background: 'linear-gradient(135deg, rgb(13 157 127), rgb(93 78 39))',
               color: '#f8fafc',
               boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.3)',
             }}

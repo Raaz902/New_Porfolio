@@ -6,6 +6,8 @@ import { Fade, Rotate } from "react-awesome-reveal";
 import insight_image from '../../images/insight_image.png'
 import insight_admin2 from '../../images/insight_admin2.png'
 import newLife_image from '../../images/newLife_image.png'
+import crafterHack from '../../images/crafterHack.png'
+import { Link } from 'react-router-dom';
 const HomeCourses = () => {
     const projects = [
         {
@@ -19,7 +21,8 @@ const HomeCourses = () => {
                 { name: "Express.js", color: "badge-neutral" },
                 { name: "SQL Server", color: "badge-secondary" }
             ],
-            projectType:"Full Stack"
+            projectType: "Full Stack",
+            url: 'https://www.insightupsc.com/'
         },
         {
             id: 2,
@@ -32,7 +35,22 @@ const HomeCourses = () => {
                 { name: "Express.js", color: "badge-neutral" },
                 { name: "SQL Server", color: "badge-secondary" }
             ],
-            projectType: "Full Stack"
+            projectType: "Full Stack",
+            url: ''
+        },
+        {
+            id: 3,
+            title: "CrafterHack Wibsite",
+            description: "CrafterHack is your ultimate coding platform for challenges, contests, and collaborative learning. Join our community and enhance your coding skills!",
+            imgurl: crafterHack,
+            badges: [
+                { name: "React", color: "badge-accent" },
+                { name: "Node.js", color: "badge-success" },
+                { name: "Express.js", color: "badge-neutral" },
+                { name: "MongoDB", color: "badge-secondary" }
+            ],
+            projectType: "Full Stack",
+            url: 'https://crafterhack.com/'
         },
         {
             id: 3,
@@ -44,8 +62,10 @@ const HomeCourses = () => {
                 { name: "TailwindCSS", color: "badge-success" },
                 { name: "MaterialUI", color: "badge-primary" }
             ],
-            projectType: "Frontend"
-        }
+            projectType: "Frontend",
+            url: 'https://nashamukti.in/'
+        },
+
     ];
 
     return (
@@ -65,15 +85,15 @@ const HomeCourses = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-2  xl:grid-cols-4 p-8 pt-2 lg:px-20">
                 {projects.map((course) => (
                     <Rotate triggerOnce={true}>
-                        <div key={course.id} className="cursor-pointer p-2 bg-[#e7f4f6] rounded transition delay-75 duration-300 ease-in-out hover:scale-y-110 h-full flex flex-col">
-                            <div className="badge bg-pink-500 text-white">{course.projectType}</div>
+                        <div key={course.id} className="cursor-pointer p-2 bg-[#e7f4f6] rounded transition delay-75 duration-300 ease-in-out hover:scale-y-105 h-full flex flex-col">
+                            <div className="badge bg-pink-500 text-white pb-3">{course.projectType}</div>
                             <div className="w-100 sm:h-36 h-44 p-1">
                                 <img className="rounded-lg w-full sm:h-32 h-40 object-fill" src={course.imgurl} alt="" />
                             </div>
                             <div className="flex justify-around">
                                 {
                                     course.badges.map(badge => {
-                                        return <div className={`badge ${badge.color}`}>{badge.name}</div>
+                                        return <div className={`badge p-1 ${badge.color}`}>{badge.name}</div>
                                     })
                                 }
                             </div>
@@ -84,7 +104,9 @@ const HomeCourses = () => {
                                 </p>
                             </div>
                             <div className="p-2">
-                                <button className="bg-cyan p-1 text-white font-nunito text-sm rounded-sm">View</button>
+                                <a href={course.url} target='_blank'>
+                                    <button disabled={!course.url} className={`${course.url ? 'bg-cyan' : 'bg-gray-400'} p-1 text-white font-nunito text-sm rounded-sm`}>{course?.url ? "View Project" : "Can't Share"}</button>
+                                </a>
                             </div>
                         </div>
                     </Rotate>
