@@ -24,17 +24,18 @@ const HomePage = () => {
       <div className="w-full bg-news-image bg-cover" id="home">
         <div className="flex flex-col-reverse md:grid grid-cols-2 items-center py-2 px-5 md:px-12">
           {/* Left Section: Introduction */}
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center md:py-2">
             <div className="max-w-lg ">
-              <p className="text-md text-cyan font-rubik font-medium sm:mt-0 md:mt-3">
-                Hello,
-              </p>
-              <p className="lg:text-4xl text-3xl text-black font-nunito font-bold leading-tight">
-                I'm Muhammad Raaz, Experienced Full Stack Software Developer
-              </p>
-              <p className="lg:text-lg text-md text-black font-rubik mt-4">
+              <span className="text-md text-cyan font-rubik font-medium sm:mt-0 md:mt-3">
+              Hi there,
+              </span>
+              <br />
+              <span className=" lg:text-2xl text-xl text-black font-nunito font-bold leading-tight">
+               I am Mohammad Raaz, an experienced Full-Stack Software Developer.
+              </span>
+              <p className="lg:text-lg text-md  text-black font-rubik mt-3">
                 With over 1 year of experience in my current role, I am responsible for developing and maintaining full-stack web applications that align with client requirements and business objectives. I collaborate closely with designers, product managers, and other developers to deliver high-quality software solutions.
-                <br /><br />
+               <br />
                 Let’s collaborate to turn your ideas into reality and create innovative solutions that drive success!
               </p>
               <div className="mt-6 flex justify-between items-center gap-x-4 p-2">
@@ -59,7 +60,7 @@ const HomePage = () => {
           </div>
 
           {/* Right Section: Image */}
-          <div className="grid grid-cols-1 justify-items-center gap-20">
+          <div className="grid grid-cols-1 justify-items-center sm:gap-20 gap-10">
             <img
               className="rounded-full h-60 w-60 shadow-lg border-4 border-cyan mt-3 mb-0"
               src={final_Home_Image}
