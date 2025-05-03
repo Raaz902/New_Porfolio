@@ -22,7 +22,7 @@ const HomeCourses = () => {
                 { name: "SQL Server", color: "badge-secondary" }
             ],
             projectType: "Full Stack",
-            url: 'https://www.insightupsc.com/'
+            url: 'https://insightdelhi.com/'
         },
         {
             id: 2,

@@ -34,7 +34,7 @@ const HomePage = () => {
                I am Mohammad Raaz, an experienced Full-Stack Software Developer.
               </span>
               <p className="lg:text-lg text-md  text-black font-rubik mt-3">
-                With over 1 year of experience in my current role, I am responsible for developing and maintaining full-stack web applications that align with client requirements and business objectives. I collaborate closely with designers, product managers, and other developers to deliver high-quality software solutions.
+                With over 1.5 year of experience in my current role, I am responsible for developing and maintaining full-stack web applications that align with client requirements and business objectives. I collaborate closely with designers, product managers, and other developers to deliver high-quality software solutions.
                <br />
                 Let’s collaborate to turn your ideas into reality and create innovative solutions that drive success!
               </p>
