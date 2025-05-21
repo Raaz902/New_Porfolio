@@ -52,7 +52,7 @@ const Experience = () => {
             <h3 className="md:text-2xl text-xl font-bold text-white tracking-wide">
               Full Stack Developer
             </h3>
-            <h5 className="mt-2 font-semibold text-gray-300">Unique TutorArc Pvt. Ltd., Delhi, India</h5>
+            <h5 className="mt-2 font-semibold text-gray-300">Technology Xtend,  Delhi, India</h5>
             <div className="mt-2">
               <ul className="space-y-2 text-gray-200 md:text-base text-sm font-medium md:px-4 px-1">
                 <li className="flex items-center gap-3">
