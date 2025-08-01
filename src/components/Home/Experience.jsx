@@ -31,7 +31,7 @@ const Experience = () => {
           <VerticalTimelineElement
             position="left"
             className="vertical-timeline-element--work"
-            date="December 2023 - Present"
+            date="September 2023 - Present"
             dateClassName="lg:text-gray-800 text-sm font-semibold"
             contentStyle={{
               background: 'linear-gradient(135deg, rgb(2 6 6), rgb(15 142 171))',
@@ -79,7 +79,7 @@ const Experience = () => {
           <VerticalTimelineElement
             position="right"
             className="vertical-timeline-element--work"
-            date="September 2022 - Present"
+            date="May 2022 - July 2022"
             dateClassName="lg:text-gray-800  text-sm font-semibold"
             contentStyle={{
               background: 'linear-gradient(135deg, rgb(13 157 127), rgb(93 78 39))',
