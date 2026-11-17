@@ -11,9 +11,21 @@ import { Link } from 'react-router-dom';
 const HomeCourses = () => {
     const projects = [
         {
+            id: 3,
+            title: "Crafter Hack | DSA Learner's Platform",
+            description: "Sole contributor. Built a DSA platform with problem-solving, live coding, leaderboards, mock interviews, and 75 hard challenges. Increased coding engagement by 40% through a real-time collaborative coding environment using WebSockets, weekly challenges, and automated reminders.",
+            imgurl: crafterHack,
+            badges: [
+                { name: "MERN Stack", color: "badge-accent" },
+                { name: "Socket.io", color: "badge-success" }
+            ],
+            projectType: "Full Stack",
+            url: 'https://crafterhack.com/'
+        },
+        {
             id: 1,
-            title: "Insight IAS Delhi Website",
-            description: "Successfully developed, deployed, and currently maintaining the complete application (Website & Admin Panel) for Insight IAS, Delhi.",
+            title: "Insight IAS Delhi | UPSC Coaching Institute",
+            description: "Lead Developer. Built and maintained the web platform with modules for courses, Test Series, Online Exams, Books, Blogs, Current Affairs, Open Quizzes, and an admin panel for full module management.",
             imgurl: insight_image,
             badges: [
                 { name: "React", color: "badge-accent" },
@@ -39,21 +51,7 @@ const HomeCourses = () => {
             url: ''
         },
         {
-            id: 3,
-            title: "CrafterHack Wibsite",
-            description: "CrafterHack is your ultimate coding platform for challenges, contests, and collaborative learning. Join our community and enhance your coding skills!",
-            imgurl: crafterHack,
-            badges: [
-                { name: "React", color: "badge-accent" },
-                { name: "Node.js", color: "badge-success" },
-                { name: "Express.js", color: "badge-neutral" },
-                { name: "MongoDB", color: "badge-secondary" }
-            ],
-            projectType: "Full Stack",
-            url: 'https://crafterhack.com/'
-        },
-        {
-            id: 3,
+            id: 4,
             title: "New Life Nasha Mukti Kendra Website",
             description: "Designed, developed, deployed, and currently maintaining the website for NEW LIFE Rehabilitation & De-Addiction Centre.",
             imgurl: newLife_image,
@@ -82,15 +80,15 @@ const HomeCourses = () => {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-2  xl:grid-cols-4 p-8 pt-2 lg:px-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4 sm:px-8 pb-8 pt-2 lg:px-20">
                 {projects.map((course) => (
-                    <Rotate triggerOnce={true}>
-                        <div key={course.id} className="cursor-pointer p-2 bg-[#e7f4f6] rounded transition delay-75 duration-300 ease-in-out hover:scale-y-105 h-full flex flex-col">
+                    <Rotate triggerOnce={true} key={course.id}>
+                        <div className="cursor-pointer p-2 bg-[#e7f4f6] rounded transition delay-75 duration-300 ease-in-out hover:scale-y-105 h-full flex flex-col">
                             <div className="badge bg-pink-500 text-white pb-3">{course.projectType}</div>
                             <div className="w-100 sm:h-36 h-44 p-1">
-                                <img className="rounded-lg w-full sm:h-32 h-40 object-fill" src={course.imgurl} alt="" />
+                                <img className="rounded-lg w-full sm:h-32 h-40 object-cover object-top" src={course.imgurl} alt="" />
                             </div>
-                            <div className="flex justify-around">
+                            <div className="flex flex-wrap justify-around gap-1">
                                 {
                                     course.badges.map(badge => {
                                         return <div className={`badge p-1 ${badge.color}`}>{badge.name}</div>

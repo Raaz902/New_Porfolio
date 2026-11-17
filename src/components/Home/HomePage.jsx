@@ -12,6 +12,9 @@ import final_Home_Image from '../../components/images/raaz_new.jpg'
 import { Modal } from 'react-bootstrap';
 import Education from './Education';
 import TechStack from './TechStack/TechStack';
+import Achievements from './Achievements';
+
+const RESUME_URL = 'https://drive.google.com/file/d/1CMUbFiRzFC6BDCG_VSz3IButVKgdIsXr/view';
 
 
 const HomePage = () => {
@@ -31,12 +34,13 @@ const HomePage = () => {
               </span>
               <br />
               <span className=" lg:text-2xl text-xl text-black font-nunito font-bold leading-tight">
-               I am Mohammad Raaz, an experienced Full-Stack Software Developer.
+               I am Mohammad Raaz, a Software Engineer &amp; Full Stack Developer.
               </span>
               <p className="lg:text-lg text-md  text-black font-rubik mt-3">
-                With over 3+ year of experience in my current role, I am responsible for developing and maintaining full-stack web applications that align with client requirements and business objectives. I collaborate closely with designers, product managers, and other developers to deliver high-quality software solutions.
+                <strong>Full Stack Developer</strong> with <strong className="text-cyan">4 years of experience</strong> in building cross-platform applications, optimizing systems, and enhancing user experiences. Currently working as a <strong>Software Development Engineer</strong> at{' '}
+                <a href="https://www.storable.com" target="_blank" rel="noopener noreferrer" className="font-bold text-cyan no-underline hover:underline">Storable India</a>, building scalable <strong>microservices</strong>, <strong>RESTful APIs</strong>, and cloud-native solutions on <strong>AWS</strong>. Strong <strong>problem-solving</strong> skills with a focus on delivering results in fast-paced environments, quick to adapt to evolving technologies and committed to continuous learning.
                <br />
-                Let’s collaborate to turn your ideas into reality and create innovative solutions that drive success!
+                <span className="italic">Let’s collaborate to turn your ideas into reality and create innovative solutions that drive success!</span>
               </p>
               <div className="mt-6 flex justify-between items-center gap-x-4 p-2">
                 <a href="https://wa.me/919750916786" target="_blank" className="no-underline" rel="noopener noreferrer">
@@ -48,7 +52,7 @@ const HomePage = () => {
                   </span>
                 </a>
 
-                <a href="/Raaz_FullStack.pdf" download="Raaz_FullStack.pdf" className="no-underline">
+                <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="no-underline">
                   <button className="block md:hidden cursor-pointer text-white bg-green-500 hover:bg-green-600 transition duration-300 rounded-full md:py-3 md:px-6 px-4 py-2 font-bold shadow-lg">
                     RESUME
                   </button>
@@ -67,8 +71,9 @@ const HomePage = () => {
               alt="Muhammad Raaz"
             />
             <a
-              href="/Raaz_FullStack.pdf"  // Correct path (since it's in the public folder)
-              download="Raaz_FullStack.pdf" // Ensures download
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className='no-underline'
             >
               <button
@@ -91,6 +96,7 @@ const HomePage = () => {
       <Experience />
       <TechStack/>
       <Projects />
+      <Achievements />
       <Education />
       {/* <PastStatistics /> */}
       {/* <Contact /> */}

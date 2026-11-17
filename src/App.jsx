@@ -41,11 +41,15 @@ const App = () => {
         </Routes>
         <Footer />
       </div>
-      <div className="fixed top-1/4 left-0 z-10">
-        <a href="https://wa.me/919750916786" target="_blank" rel="noopener noreferrer">
-          <FaWhatsapp className="mr-1 text-green-700" size={50} />
-        </a>        
-      </div>   
+      <a
+        href="https://wa.me/919750916786"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-20 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-green-500 shadow-lg hover:bg-green-600 transition"
+      >
+        <FaWhatsapp className="text-white text-[1.75rem] md:text-[2rem]" />
+      </a>
 
     </>
 

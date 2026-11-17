@@ -1,69 +1,41 @@
-import React, { useContext, useState } from 'react';
-import { Accordion, AccordionContext, Button, Card, Modal, Offcanvas, useAccordionButton } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Offcanvas } from 'react-bootstrap';
 import { VscMenu } from "react-icons/vsc";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { Link } from 'react-scroll';
 import logo from '../../components/images/102kb.jpg'
 
-
-const PINK = 'rgba(255, 192, 203, 0.6)';
-const BLUE = 'rgba(0, 0, 255, 0.6)';
-
-function ContextAwareToggle({ children, eventKey, callback }) {
-    const { activeEventKey } = useContext(AccordionContext);
-
-    const decoratedOnClick = useAccordionButton(
-        eventKey,
-        () => callback && callback(eventKey),
-    );
-
-    const isCurrentEventKey = activeEventKey === eventKey;
-
-    return (
-        <span
-            type="button"
-            style={{}}
-            onClick={decoratedOnClick}
-        >
-            {children}
-        </span>
-    );
-}
-const listItems = [
-    { id: 1, name: 'Home' },
-    { id: 2, name: 'About' },
-    { id: 3, name: 'Courses' },
-    { id: 4, name: 'Registration' },
-    { id: 5, name: 'Boost' },
-    { id: 6, name: 'Achievements' },
-    { id: 7, name: 'Contact' }
+const menuItems = [
+    { to: 'home', label: 'Home' },
+    { to: 'experience', label: 'Experience' },
+    { to: 'techstack', label: 'Tech Stack' },
+    { to: 'projects', label: 'Projects' },
+    { to: 'achievements', label: 'Achievements' },
+    { to: 'education', label: 'Education' },
 ];
-
-
 
 const MobileMenu = () => {
     const [show, setShow] = useState(false);
-    const [showChild, setShowChild] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [showContact, setShowContact] = useState(false);
-
     return (
         <div className='sticky top-0 z-10'>
-            <div className="w-full flex justify-between items-center px-2 py-1 my-2 bg-gray-100 ">
-                <div className="w-[25rem] flex justify-start items-center">
-                    <span className='w-[3rem] me-2'> <img src={logo} alt="logo image" className='rounded-full' /></span>
-                    <span className='text-2xl font-nunito font-bold text-cyan'>Mohammad Raaz
-                        <span className='block text-sm font-nunito font-bold text-dark'>Software Development Engineer</span>
-                    </span>
+            <div className="w-full flex justify-between items-center gap-2 px-3 py-2 bg-white shadow-md">
+                <div className="flex-1 min-w-0 flex justify-start items-center">
+                    <img src={logo} alt="logo" className='w-10 h-10 sm:w-12 sm:h-12 rounded-full me-2 shrink-0' />
+                    <div className='min-w-0'>
+                        <p className='text-lg sm:text-2xl font-nunito font-bold text-cyan m-0 truncate'>Mohammad Raaz</p>
+                        <p className='text-xs sm:text-sm font-nunito font-bold text-dark m-0 truncate'>Software Development Engineer</p>
+                    </div>
                 </div>
 
-                <div className="">
-                    <VscMenu color='' size={30} onClick={handleShow} className='cursor-pointer' />
-                </div>
-
+                <button type="button" onClick={handleShow} aria-label="Open menu" className='p-1 shrink-0'>
+                    <VscMenu size={28} />
+                </button>
             </div>
+
             <Offcanvas show={show} onHide={handleClose} backdrop={true} scroll={true} style={{ width: '16rem' }} backdropClassName={show ? "custom-backdrop" : "custom-backdrop-close"} >
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>
@@ -72,89 +44,35 @@ const MobileMenu = () => {
                 </Offcanvas.Header>
                 <Offcanvas.Body className='mt-0 pt-0'>
                     <ul className='w-full p-1 mt-0 pt-0'>
-                        {/* <li lassName="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
-                            <Link onClick={() => setShow(false)}
-                                to='home2' spy={true}
-                                smooth={true}
-                                offset={-100}
-                                duration={100} className=' no-underline text-current'>
-                                <span className='hover:text-cyan cursor-pointer'>HOME</span>
-                            </Link>
-                        </li> */}
-                        <li className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
-                            <Link onClick={() => setShow(false)} to='home' spy={true}
-                                smooth={true}
-                                offset={-100}
-                                duration={100} className=' no-underline text-current'>
-                                <span className='hover:text-cyan cursor-pointer'>HOME</span>
-                            </Link>
-                        </li>
-                        {/* <li className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
-                            <Link onClick={() => setShow(false)} to='about' spy={true}
-                                smooth={true}
-                                offset={-100}
-                                duration={100} className=' no-underline text-current'>
-                                <span className='hover:text-cyan cursor-pointer'>ABOUT</span>
-                            </Link>
-                        </li> */}
-                        <li className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
-                            <Link onClick={() => setShow(false)} to='techstack' spy={true}
-                                smooth={true}
-                                offset={-100}
-                                duration={100} className=' no-underline text-current'>
-                                <span className='hover:text-cyan cursor-pointer'>TECH STACK</span>
-                            </Link>
-                        </li>
-                        <li className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
-                            <Link onClick={() => setShow(false)} to='projects' spy={true}
-                                smooth={true}
-                                offset={-100}
-                                duration={100} className=' no-underline text-current'>
-                                <span className='hover:text-cyan cursor-pointer'>PROJECTS</span>
-                            </Link>
-                        </li>
-                        <li className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
-                            <Link onClick={() => setShow(false)} to='education' spy={true}
-                                smooth={true}
-                                offset={-100}
-                                duration={100} className=' no-underline text-current'>
-                                <span className='hover:text-cyan cursor-pointer'>EDUCATION</span>
-                            </Link>
-                        </li>
-                        <li className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
-                            <Link onClick={() => setShow(false)} to='achievements' spy={true}
-                                smooth={true}
-                                offset={-100}
-                                duration={100} className=' no-underline text-current'>
-                                <span className='hover:text-cyan cursor-pointer'>ACHIEVEMENTS</span>
-                            </Link>
-                        </li>
-                        <li onlick={() => setShow(false)} className="p-3 cursor-pointer hover:text-cyan hover:scale-y-110 font-rubik font-[420]">
-                            <span onClick={() => setShowContact(true)} className='hover:text-cyan cursor-pointer'>CONTACT</span>
+                        {menuItems.map((item) => (
+                            <li key={item.to} className="p-3 cursor-pointer font-rubik font-[420] uppercase">
+                                <Link
+                                    onClick={handleClose}
+                                    to={item.to}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-80}
+                                    duration={100}
+                                    className='no-underline text-current'
+                                >
+                                    <span className='hover:text-cyan cursor-pointer'>{item.label}</span>
+                                </Link>
+                            </li>
+                        ))}
+                        <li className="p-3 font-rubik font-[420] uppercase">
+                            <a href="https://wa.me/919750916786" target="_blank" rel="noopener noreferrer" className='no-underline text-current hover:text-cyan'>
+                                Contact
+                            </a>
                         </li>
                     </ul>
+
+                    <div className='flex gap-5 px-3 mt-4 text-xl'>
+                        <a href="https://github.com/Raaz902" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className='text-slate-700 hover:text-cyan'><FaGithub /></a>
+                        <a href="https://www.linkedin.com/in/mohammad-raaz/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className='text-slate-700 hover:text-cyan'><FaLinkedinIn /></a>
+                        <a href="https://wa.me/919750916786" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className='text-slate-700 hover:text-cyan'><FaWhatsapp /></a>
+                    </div>
                 </Offcanvas.Body>
             </Offcanvas>
-
-            {/* contact modal */}
-            {/* <Modal
-                show={showContact}
-                size='xl'
-                onHide={() => setShowContact(false)}
-                dialogClassName="modal-90w"
-                aria-labelledby="example-custom-modal-styling-title"
-                backdrop='static'
-            >
-                <Modal.Header closeButton>
-                    <Modal.Title id="example-custom-modal-styling-title">
-                        <p className='text-2xl font-nunito font-bold text-start  text-cyan'>Get In Touch</p>
-                        <p className='text-sm font-rubik '>Take the First Step – We’re Just a Call Away!</p>
-                    </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Contact setShow={setShowContact} />
-                </Modal.Body>
-            </Modal> */}
         </div >
     );
 }
