@@ -22,12 +22,12 @@ const TechStack = () => {
             </div>
 
             {/* Timeline Section */}
-            <div className="bg-gray-100 md:px-5 my-2 mx-3 border rounded grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-3 md:gap-x-7">
+            <div className="bg-gray-100 p-2 md:px-5 my-2 mx-3 md:mx-10 lg:mx-20 border rounded grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-1 md:gap-x-4">
                 {TechstackList.map((tech, index) => (
-                    <Fade key={index} left>
-                        <div className="hover-class flex items-center p-3 bg-white m-2 cursor-pointer text-[#138781] rounded-lg  shadow-md ">
-                            <tech.icon className="mx-1  transition duration-100 " size={40} />
-                            <span className="ml-2 text-lg font-medium  transition duration-300">{tech.name}</span>
+                    <Fade key={index} triggerOnce={true}>
+                        <div className="hover-class flex items-center p-2 md:p-3 bg-white m-1 md:m-2 cursor-pointer text-[#21a7d0] rounded-lg  shadow-md ">
+                            <tech.icon className="mx-1 shrink-0 text-2xl md:text-4xl transition duration-100" />
+                            <span className="ml-1 md:ml-2 text-sm md:text-lg font-medium leading-tight break-words min-w-0 transition duration-300">{tech.name}</span>
                         </div>
                     </Fade>
                 ))}

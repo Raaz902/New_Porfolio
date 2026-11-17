@@ -34,13 +34,13 @@ const Header1 = () => {
     return (
         <Fade direction='left' triggerOnce={true}>
             <section className='h-8 text-white bg-indigo flex justify-between items-center p-0 font-rubik py-0' >
-                <ul className='w-[500px] flex justify-around items-baseline'>
+                <ul className='flex justify-around items-baseline gap-6 px-6'>
                     <li className='list-none flex justify-between items-center mt-3  hover:text-cyan cursor-pointer'>
                         <FaPhone size={18} className='mr-2 ' /> +91 9750916786
                     </li>
                     <span className='text-2xl'>|</span>
                     <li className='list-none flex justify-between items-center mt-3  hover:text-cyan cursor-pointer'>
-                        <MdEmail size={18} className='mr-2 ' /> mohammadraaz902@gmail.com
+                        <MdEmail size={18} className='mr-2 ' /> mohdraaz902@gmail.com
                     </li>
                 </ul>
                 <ul className='flex justify-around items-center mx-3  '>
@@ -67,16 +67,16 @@ const Header2 = () => {
             <div className='h-18 grid grid-cols-7  shadow-md font-rubik sticky top-0 bg-[#ffffff] z-10 py-2' >
                 <div className='col-span-2 flex justify-center place-items-start   p-0'>
                     <div className="px-2">
-                        <img className='w-[4rem] rounded-full mt-0' src={logo} alt="logo" />
+                        <img className='w-[3.5rem] xl:w-[4rem] rounded-full mt-0' src={logo} alt="logo" />
                     </div>
-                    <div className="">
-                        <p className='text-3xl font-nunito font-bold pt-3 m-0 p-0 text-cyan'>Mohammad Raaz</p>
-                        <p className='text-sm font-rubik m-0 p-0'>Software Development Engineer</p>
+                    <div className="min-w-0">
+                        <p className='text-2xl xl:text-3xl font-nunito font-bold pt-3 m-0 p-0 text-cyan whitespace-nowrap'>Mohammad Raaz</p>
+                        <p className='text-xs xl:text-sm font-rubik m-0 p-0 whitespace-nowrap'>Software Development Engineer</p>
                     </div>
 
 
                 </div>
-                <div className="col-span-4 flex items-center justify-evenly px-2 text-[#4a4848]  text-sm font-[420] uppercase ">
+                <div className="col-span-4 flex items-center justify-evenly gap-2 px-2 text-[#4a4848] text-xs xl:text-sm font-[420] uppercase whitespace-nowrap">
                     <li className='list-none group'>
                         <Link to='home' spy={true}
                             smooth={true}
@@ -143,7 +143,7 @@ const Header2 = () => {
                 <div className='col-span-1 flex items-center justify-around'>
                     <Fade direction='right'>
                          <a href="https://wa.me/919750916786" target="_blank" rel="noopener noreferrer">
-                            <button /* onClick={() => setShow(true)} */ className='bg-cyan text-white p-2   text-sm focus:ring hover:ring-black font-medium' >Contact Now</button>
+                            <button /* onClick={() => setShow(true)} */ className='bg-cyan text-white px-3 py-2 rounded text-sm whitespace-nowrap focus:ring hover:ring-black font-medium' >Contact Now</button>
                                 </a>    
                       
                         {/* <Link to='contact' spy={true}
